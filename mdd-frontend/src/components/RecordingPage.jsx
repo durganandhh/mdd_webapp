@@ -1,6 +1,9 @@
 import React, { useState, useRef } from "react";
 import "../styles/RecordingPage.css";
 
+// Backend base URL. Set VITE_API_URL in mdd-frontend/.env (see .env.example).
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+
 export default function RecordingPage() {
   const [isRecording, setIsRecording] = useState(false);
   const [audioURL, setAudioURL] = useState(null);
@@ -69,7 +72,7 @@ export default function RecordingPage() {
     formData.append("audio", file);
 
     try {
-      const res = await fetch("http://localhost:8000/score", {
+      const res = await fetch(`${API_URL}/score`, {
         method: "POST",
         body: formData,
       });
