@@ -8,13 +8,11 @@ import ffmpeg
 import soundfile as sf
 import numpy as np
 
-from finetune.Finetune_v11 import clean_text, text_to_espeak_ipa, normalize_ipa_string
+from config import MODEL_DIR, AUDIO_OUT_DIR
+from mdd.text_utils import clean_text, text_to_espeak_ipa, normalize_ipa_string
 from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC
 
 TARGET_SR = 16000
-MODEL_DIR = "/home/mcw/durga/best_wav2vec2_phoneme_model_v8"
-
-AUDIO_OUT_DIR = "correct_audio"
 os.makedirs(AUDIO_OUT_DIR, exist_ok=True)
 
 print("Loading model:", MODEL_DIR)
