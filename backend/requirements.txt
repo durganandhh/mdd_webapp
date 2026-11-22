@@ -1,0 +1,11 @@
+# Serving (API) dependencies.
+# System packages also needed: ffmpeg, espeak (apt install ffmpeg espeak  |  Windows: install eSpeak NG + ffmpeg and add to PATH)
+fastapi
+uvicorn[standard]
+python-multipart
+torch
+transformers
+numpy
+soundfile
+ffmpeg-python
+phonemizer

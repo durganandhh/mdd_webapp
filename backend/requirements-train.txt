@@ -1,0 +1,7 @@
+# Extra dependencies for training / evaluation (finetune/, mdd/speechocean.py)
+-r requirements.txt
+librosa
+datasets
+pandas
+torchaudio
+sequence-align

@@ -19,7 +19,9 @@ import pandas as pd
 from datasets import Dataset
 
 
-BASE = "/home/mcw/durga/mispronunciation-detection-diagnosis-wav2vec2-and-llm/speechocean762"
+from config import SPEECHOCEAN_DIR
+
+BASE = SPEECHOCEAN_DIR
 WAVE_DIR = os.path.join(BASE, "WAVE")
 
 

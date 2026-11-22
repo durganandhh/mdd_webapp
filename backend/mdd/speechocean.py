@@ -13,8 +13,10 @@ warnings.filterwarnings("ignore", category=UserWarning, module="torchaudio")
 # ============================================================
 # CONFIG (CHANGE THESE)
 # ============================================================
-WAVE_ROOT = "/home/mcw/durga/mispronunciation-detection-diagnosis-wav2vec2-and-llm/speechocean762/WAVE"
-TRANSCRIPT_FILE = "/home/mcw/durga/mispronunciation-detection-diagnosis-wav2vec2-and-llm/speechocean762/test/text"
+from config import SPEECHOCEAN_DIR
+
+WAVE_ROOT = os.path.join(SPEECHOCEAN_DIR, "WAVE")
+TRANSCRIPT_FILE = os.path.join(SPEECHOCEAN_DIR, "test", "text")
 MODEL_NAME = "mrrubino/wav2vec2-large-xlsr-53-l2-arctic-phoneme"
 
 # ============================================================
